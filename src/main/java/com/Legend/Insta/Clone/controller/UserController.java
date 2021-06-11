@@ -23,4 +23,9 @@ public class UserController {
     public List<UserDTO>getAll(){
         return userService.findAll();
     }
+
+    @GetMapping("{id}")
+    public UserDTO getById(int id){
+        return userService.findById(id);
+    }
 }
