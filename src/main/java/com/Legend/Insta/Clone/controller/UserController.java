@@ -24,8 +24,8 @@ public class UserController {
         return userService.findAll();
     }
 
-    @GetMapping("{id}")
-    public UserDTO getById(int id){
+    @GetMapping("/{id}")
+    public UserDTO getById(@PathVariable int id){
         return userService.findById(id);
     }
 }
